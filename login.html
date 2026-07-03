@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-light">
+
+    <nav class="navbar bg-white shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="./assests/logo.png" width="30" height="24">
+            </a>
+        </div>
+    </nav>
+
+
+    <div class="container">
+
+
+        
+        <div class="row vh-100 justify-content-center align-items-center">
+
+            <div class="col-md-5">
+
+                <div class="card shadow border-0 rounded-4 p-4">
+
+                    <h3 class="text-center mb-4">
+                        Student Login
+                    </h3>
+
+
+
+                    <form action="./dashboard.html">
+
+                        <div class="mb-3">
+                            <label class="form-label">Email Address</label>
+                            <input type="email" class="form-control" placeholder="Enter email" required>
+
+                            <div class="invalid-feedback">
+                                Please enter a valid email address (example: name@gmail.com)
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Password</label>
+                            <input type="password" class="form-control" placeholder="Enter password" required
+                                minlength="8">
+
+                            <div class="invalid-feedback">
+                                Password must be at least 8 characters long
+                            </div>
+                        </div>
+
+                        <div class="text-end">
+                            <button type="submit" class="btn btn-primary px-4 rounded-pill">
+                                Login
+                            </button>
+                        </div>
+
+                    </form>
+
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+</body>
+
+</html>
