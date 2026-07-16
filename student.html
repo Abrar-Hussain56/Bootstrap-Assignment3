@@ -2,577 +2,328 @@
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Students</title>
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
-
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 </head>
 
-
-<body>
-
-
+<body class="bg-body-secondary">
     <nav class="navbar bg-body-tertiary">
+    <div class="container">
+        <!-- Logo on the left -->
+        <a class="navbar-brand" href="login.html">
+            <img src="./assests/logo.png" alt="logo" width="30" height="24">
+        </a>
 
-        <div class="container">
+        <!-- Everything on the right -->
+        <div class="ms-auto d-flex align-items-center gap-3">
+            <!-- Link 1 (Styled as an outline button) -->
+            <a class="btn btn-outline-primary" href="student.html">Students</a>
+            
+            <!-- Link 2 (Styled as a danger button) -->
+            <a class="btn btn-outline-primary" href="login.html">Logout</a>
 
-            <a class="navbar-brand" href="login.html">
-                <img src="./assests/logo.png" alt="logo" width="30" height="24">
-            </a>
-
-
-            <h3 class="text-end">
-                welcome
+            <h3 class="mb-0 fs-5 text-secondary">
+                Welcome
             </h3>
-
-
         </div>
-
-    </nav>
-
-
-
-
+    </div>
+</nav>
     <div class="container text-center">
-
-
-        <div class="row mt-4">
-
-
-            <div class="col-10">
-
-                <h2 class="text-start">
-                    Students
-                </h2>
-
+        <div class="row">
+            <div class="col-10 mt-4">
+                <h2 class="text-start">Students</h2>
             </div>
-
-
-
-            <div class="col-2">
-
-                <button class="btn btn-primary">
+            <div class="col-2 mt-4 ">
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-primary pr-3 dropdown-toggle" data-bs-toggle="modal"
+                    data-bs-target="#staticBackdrop">
                     Filter
                 </button>
-
-            </div>
-
-
-        </div>
-
-
-
-
-
-        <div class="row p-4 row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4">
-
-
-
-                <!-- <div class="col mt-3">
-
-                    <div class="card">
-
-                        <img src="./assests/image.png" class="card-img-top">
-
-                        <div class="card-body">
-
-                            <h5 class="card-title">
-                                Abrar Hussain
-                            </h5>
-
-                            <p class="card-text">
-                                Age: 17
-                            </p>
-
-                            <p class="card-text">
-                                Batch: 22
-                            </p>
-
-                            <p class="card-text">
-                                Level: Intermediate
-                            </p>
-
-
-                            
-                            <div class="card position-relative">
-
-                                <a href="#" class="btn btn-primary w-100 position-absolute bottom-0 start-50 translate-middle-x">
-                                    Remove
-                                </a>
+                <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
+                    tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="staticBackdropLabel">Filter Cards</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body text-start">
+                                <ul class="list-group">
+                                    <li class="list-group-item">
+                                        <input class="form-check-input me-1" type="checkbox" value=""
+                                            id="firstCheckboxStretched">
+                                        <label class="form-check-label stretched-link"
+                                            for="firstCheckboxStretched">Name</label>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <input class="form-check-input me-1" type="checkbox" value=""
+                                            id="secondCheckboxStretched">
+                                        <label class="form-check-label stretched-link"
+                                            for="secondCheckboxStretched">Age</label>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <input class="form-check-input me-1" type="checkbox" value=""
+                                            id="thirdCheckboxStretched">
+                                        <label class="form-check-label stretched-link"
+                                            for="thirdCheckboxStretched">Batch</label>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <input class="form-check-input me-1" type="checkbox" value=""
+                                            id="fourtCheckboxStretched">
+                                        <label class="form-check-label stretched-link"
+                                            for="fourtCheckboxStretched">Courses</label>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <input class="form-check-input me-1" type="checkbox" value=""
+                                            id="fifetCheckboxStretched">
+                                        <label class="form-check-label stretched-link"
+                                            for="fifetCheckboxStretched">Image</label>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary">Save</button>
+                            </div>
                         </div>
-
                     </div>
-
-                </div> -->
-
-
-                <div class="col mt-3">
-    <div class="card h-100">
-
-        <img src="./assests/image.png" class="card-img-top" alt="Student">
-
-        <div class="card-body d-flex flex-column">
-
-            <h5 class="card-title">Abrar Hussain</h5>
-
-            <p class="card-text">Age: 17</p>
-            <p class="card-text">Batch: 22</p>
-            <p class="card-text">Level: Intermediate</p>
-
-            <!-- Collapse Button -->
-            <button class="btn btn-info btn-sm mb-2"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#student1">
-                Details
-            </button>
-
-            <!-- Collapse Content -->
-            <div class="collapse" id="student1">
-                <div class="card card-body">
-                    <strong>Phone:</strong> 0300-1234567 <br>
-                    <strong>Email:</strong> abrar@example.com <br>
-                    <strong>Address:</strong> Karachi, Pakistan
                 </div>
             </div>
-
-        </div>
-    </div>
-</div>
-
-
-
-
-            <div class="col mt-3">
-
-                <div class="card">
-
-                    <img src="./assests/image.png" class="card-img-top">
-
-                    <div class="card-body">
-
-                        <h5 class="card-title">
-                            Muhammad Umer
-                        </h5>
-
-                        <p class="card-text">
-                            Age: 21
-                        </p>
-
-                        <p class="card-text">
-                            Batch: 22
-                        </p>
-
-                        <p class="card-text">
-                            Level: Intermediate
-                        </p>
-
-                        <a href="#" class="btn btn-primary w-100">
-                            Remove
-                        </a>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-
-
-
-
-            <div class="col mt-3">
-
-                <div class="card">
-
-                    <img src="./assests/image.png" class="card-img-top">
-
-                    <div class="card-body">
-
-                        <h5 class="card-title">
-                            Saim Siddiqui
-                        </h5>
-
-                        <p class="card-text">
-                            Age: 19
-                        </p>
-
-                        <p class="card-text">
-                            Batch: 22
-                        </p>
-
-                        <p class="card-text">
-                            Level: Intermediate
-                        </p>
-
-
-                        <a href="#" class="btn btn-primary w-100">
-                            Remove
-                        </a>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-
-
-
-
-            <div class="col mt-3">
-
-                <div class="card">
-
-                    <img src="./assests/image.png" class="card-img-top">
-
-                    <div class="card-body">
-
-                        <h5 class="card-title">
-                            Ahmed Raza
-                        </h5>
-
-                        <p class="card-text">
-                            Age: 23
-                        </p>
-
-                        <p class="card-text">
-                            Batch: 22
-                        </p>
-
-                        <p class="card-text">
-                            Level: Intermediate
-                        </p>
-
-                        <a href="#" class="btn btn-primary w-100">
-                            Remove
-                        </a>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-
-
-
-
-            <div class="col mt-3">
-
-                <div class="card">
-
-                    <img src="./assests/image.png" class="card-img-top">
-
-                    <div class="card-body">
-
-                        <h5 class="card-title">
-                            Hassan Ahmed
-                        </h5>
-
-                        <p class="card-text">
-                            Age: 16
-                        </p>
-
-                        <p class="card-text">
-                            Batch: 22
-                        </p>
-
-                        <p class="card-text">
-                            Level: Intermediate
-                        </p>
-
-
-                        <a href="#" class="btn btn-primary w-100">
-                            Remove
-                        </a>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-
-
-
-
-            <div class="col mt-3">
-
-                <div class="card">
-
-                    <img src="./assests/image.png" class="card-img-top">
-
-                    <div class="card-body">
-
-                        <h5 class="card-title">
-                            Bilal Shah
-                        </h5>
-
-                        <p class="card-text">
-                            Age: 20
-                        </p>
-
-                        <p class="card-text">
-                            Batch: 22
-                        </p>
-
-                        <p class="card-text">
-                            Level: Intermediate
-                        </p>
-
-                        <a href="#" class="btn btn-primary w-100">
-                            Remove
-                        </a>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-
-
-
-
-            <div class="col mt-3">
-
-                <div class="card">
-
-                    <img src="./assests/image.png" class="card-img-top">
-
-                    <div class="card-body">
-
-                        <h5 class="card-title">
-                            Saad Ali
-                        </h5>
-
-                        <p class="card-text">
-                            Age: 24
-                        </p>
-
-                        <p class="card-text">
-                            Batch: 22
-                        </p>
-
-                        <p class="card-text">
-                            Level: Intermediate
-                        </p>
-
-
-                        <a href="#" class="btn btn-primary w-100">
-                            Remove
-                        </a>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-
-
-
-
-            <div class="col mt-3">
-
-                <div class="card">
-
-                    <img src="./assests/image.png" class="card-img-top">
-
-                    <div class="card-body">
-
-                        <h5 class="card-title">
-                            Hamza Tariq
-                        </h5>
-
-                        <p class="card-text">
-                            Age: 18
-                        </p>
-
-                        <p class="card-text">
-                            Batch: 22
-                        </p>
-
-                        <p class="card-text">
-                            Level: Intermediate
-                        </p>
-
-                        <a href="#" class="btn btn-primary w-100">
-                            Remove
-                        </a>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-
-
-
-
-            <div class="col mt-3">
-
-                <div class="card">
-
-                    <img src="./assests/image.png" class="card-img-top">
-
-                    <div class="card-body">
-
-                        <h5 class="card-title">
-                            Fahad Ahmed
-                        </h5>
-
-                        <p class="card-text">
-                            Age: 22
-                        </p>
-
-                        <p class="card-text">
-                            Batch: 22
-                        </p>
-
-                        <p class="card-text">
-                            Level: Intermediate
-                        </p>
-
-
-                        <a href="#" class="btn btn-primary w-100">
-                            Remove
-                        </a>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-
-
-
-
-            <div class="col mt-3">
-
-                <div class="card">
-
-                    <img src="./assests/image.png" class="card-img-top">
-
-                    <div class="card-body">
-
-                        <h5 class="card-title">
-                            Ali Hassan
-                        </h5>
-
-                        <p class="card-text">
-                            Age: 17
-                        </p>
-
-                        <p class="card-text">
-                            Batch: 22
-                        </p>
-
-                        <p class="card-text">
-                            Level: Intermediate
-                        </p>
-
-
-                        <a href="#" class="btn btn-primary w-100">
-                            Remove
-                        </a>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-
-
-
-
-            <div class="col mt-3">
-
-                <div class="card">
-
-                    <img src="./assests/image.png" class="card-img-top">
-
-                    <div class="card-body">
-
-                        <h5 class="card-title">
-                            Saif Ullah
-                        </h5>
-
-                        <p class="card-text">
-                            Age: 21
-                        </p>
-
-                        <p class="card-text">
-                            Batch: 22
-                        </p>
-
-                        <p class="card-text">
-                            Level: Intermediate
-                        </p>
-
-                        <a href="#" class="btn btn-primary w-100">
-                            Remove
-                        </a>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-
-
-
-
-            <div class="col mt-3">
-
-                <div class="card">
-
-                    <img src="./assests/image.png" class="card-img-top">
-
-                    <div class="card-body">
-
-                        <h5 class="card-title">
-                            Rayan Ahmed
-                        </h5>
-
-                        <p class="card-text">
-                            Age: 19
-                        </p>
-
-                        <p class="card-text">
-                            Batch: 22
-                        </p>
-
-                        <p class="card-text">
-                            Level: Intermediate
-                        </p>
-
-                        <a href="#" class="btn btn-primary w-100">
-                            Remove
-                        </a>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-
         </div>
 
-
     </div>
+    <div class="container text-center">
+        <div class="row p-4 row-cols-xs-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4">
+            <div class="col mt-3">
+                <a class="nav-link active" aria-current="page" href="./student-details.html">
+                    <div class="card">
+                        <img src="./assests/image.png" class="card-img-center mt-1 rounded-circle" alt="...">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col">
+                                    <h5 class="card-title">M. Saim</h5>
+                                </div>
+                            </div>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+                            <div class="row">
+                                <div class="col-6">
+                                    <p class="card-text fw-light text-secondary">Gender</p>
+                                </div>
+                                <div class="col-6">
+                                    <p class="card-text fw-light text-secondary">Birth</p>
+                                </div>
+                                <div class="col-6">
+                                    <p class="card-text fw-semibold">Male</p>
+                                </div>
+                                <div class="col-6">
+                                    <p class="card-text fw-semibold">Feb 1, 2009</p>
+                                </div>
+                            </div>
+
+                            <div class="row mt-3">
+                                <div class="col-6">
+                                    <p class="card-text fw-light text-secondary">Qualification</p>
+                                </div>
+                                <div class="col-6">
+                                    <p class="card-text fw-light text-secondary">CNIC</p>
+                                </div>
+                                <div class="col-6">
+                                    <p class="card-text fw-semibold">Provided</p>
+                                </div>
+                                <div class="col-6">
+                                    <p class="card-text fw-semibold">1234567890</p>
+                                </div>
+                            </div>
+                            <p class="d-inline-flex gap-1 mt-3">
+                                <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample1"
+                                    role="button" aria-expanded="false" aria-controls="collapseExample">
+                                    More
+                                </a>
+                            </p>
+                            <div class="collapse" id="collapseExample1">
+                                <div class="card card-body">
+                                    All have been provided.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+            <div class="col mt-3">
+                <a class="nav-link active" aria-current="page" href="./student-details.html">
+                    <div class="card">
+                        <img src="./assests/image.png" class="card-img-center mt-1 rounded-circle" alt="...">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col">
+                                    <h5 class="card-title">M. Saim</h5>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-6">
+                                    <p class="card-text fw-light text-secondary">Gender</p>
+                                </div>
+                                <div class="col-6">
+                                    <p class="card-text fw-light text-secondary">Birth</p>
+                                </div>
+                                <div class="col-6">
+                                    <p class="card-text fw-semibold">Male</p>
+                                </div>
+                                <div class="col-6">
+                                    <p class="card-text fw-semibold">Feb 1, 2009</p>
+                                </div>
+                            </div>
+
+                            <div class="row mt-3">
+                                <div class="col-6">
+                                    <p class="card-text fw-light text-secondary">Qualification</p>
+                                </div>
+                                <div class="col-6">
+                                    <p class="card-text fw-light text-secondary">CNIC</p>
+                                </div>
+                                <div class="col-6">
+                                    <p class="card-text fw-semibold">Provided</p>
+                                </div>
+                                <div class="col-6">
+                                    <p class="card-text fw-semibold">1234567890</p>
+                                </div>
+                            </div>
+                            <p class="d-inline-flex gap-1 mt-3">
+                                <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample1"
+                                    role="button" aria-expanded="false" aria-controls="collapseExample">
+                                    More
+                                </a>
+                            </p>
+                            <div class="collapse" id="collapseExample1">
+                                <div class="card card-body">
+                                    All have been provided.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col mt-3">
+                <a class="nav-link active" aria-current="page" href="./student-details.html">
+                    <div class="card">
+                        <img src="./assests/image.png" class="card-img-center mt-1 rounded-circle" alt="...">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col">
+                                    <h5 class="card-title">M. Saim</h5>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-6">
+                                    <p class="card-text fw-light text-secondary">Gender</p>
+                                </div>
+                                <div class="col-6">
+                                    <p class="card-text fw-light text-secondary">Birth</p>
+                                </div>
+                                <div class="col-6">
+                                    <p class="card-text fw-semibold">Male</p>
+                                </div>
+                                <div class="col-6">
+                                    <p class="card-text fw-semibold">Feb 1, 2009</p>
+                                </div>
+                            </div>
+
+                            <div class="row mt-3">
+                                <div class="col-6">
+                                    <p class="card-text fw-light text-secondary">Qualification</p>
+                                </div>
+                                <div class="col-6">
+                                    <p class="card-text fw-light text-secondary">CNIC</p>
+                                </div>
+                                <div class="col-6">
+                                    <p class="card-text fw-semibold">Provided</p>
+                                </div>
+                                <div class="col-6">
+                                    <p class="card-text fw-semibold">1234567890</p>
+                                </div>
+                            </div>
+                            <p class="d-inline-flex gap-1 mt-3">
+                                <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample1"
+                                    role="button" aria-expanded="false" aria-controls="collapseExample">
+                                    More
+                                </a>
+                            </p>
+                            <div class="collapse" id="collapseExample1">
+                                <div class="card card-body">
+                                    All have been provided.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col mt-3">
+                <a class="nav-link active" aria-current="page" href="./student-details.html">
+                    <div class="card">
+                        <img src="./assests/image.png" class="card-img-center mt-1 rounded-circle" alt="...">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col">
+                                    <h5 class="card-title">M. Saim</h5>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-6">
+                                    <p class="card-text fw-light text-secondary">Gender</p>
+                                </div>
+                                <div class="col-6">
+                                    <p class="card-text fw-light text-secondary">Birth</p>
+                                </div>
+                                <div class="col-6">
+                                    <p class="card-text fw-semibold">Male</p>
+                                </div>
+                                <div class="col-6">
+                                    <p class="card-text fw-semibold">Feb 1, 2009</p>
+                                </div>
+                            </div>
+
+                            <div class="row mt-3">
+                                <div class="col-6">
+                                    <p class="card-text fw-light text-secondary">Qualification</p>
+                                </div>
+                                <div class="col-6">
+                                    <p class="card-text fw-light text-secondary">CNIC</p>
+                                </div>
+                                <div class="col-6">
+                                    <p class="card-text fw-semibold">Provided</p>
+                                </div>
+                                <div class="col-6">
+                                    <p class="card-text fw-semibold">1234567890</p>
+                                </div>
+                            </div>
+                            <p class="d-inline-flex gap-1 mt-3">
+                                <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample1"
+                                    role="button" aria-expanded="false" aria-controls="collapseExample">
+                                    More
+                                </a>
+                            </p>
+                            <div class="collapse" id="collapseExample1">
+                                <div class="card card-body">
+                                    All have been provided.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
 
 </body>
 
